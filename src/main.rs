@@ -25,7 +25,7 @@ fn main() {
                 length = std::io::stdin().read_line(&mut input).unwrap() - 2;
                 // Add letter to guessed letters
                 if length == 1 {
-                    if !word.contains(&input.trim()) {
+                    if !word.contains(&input.trim()) && !chars.contains(&input) {
                         lives -= 1;
                     }
                     if !chars.contains(&input) {
